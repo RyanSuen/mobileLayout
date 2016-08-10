@@ -13,6 +13,7 @@ class Test extends Component {
             <div>
                 <h1>Lorem ipsum dolor.</h1>
                 Lorem ipsum dolor sit amet.
+                <h2>1234</h2>
 
             </div>
         );
