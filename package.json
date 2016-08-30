@@ -7,6 +7,7 @@
     "dev": "cross-env NODE_ENV=development node ./webpack.config.development.js"
   },
   "dependencies": {
+    "antd": "^1.10.0",
     "babel-core": "^6.11.4",
     "babel-loader": "^6.2.4",
     "babel-polyfill": "^6.9.1",

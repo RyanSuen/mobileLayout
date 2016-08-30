@@ -5,24 +5,45 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 
-class Test extends Component {
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import Index from '../containers/Index'
+import rootReducer from '../reducers/index.js'
 
-    render() {
+let store = createStore( rootReducer );
 
-        return (
-            <div>
-                <h1>Lorem ipsum dolor.</h1>
-                Lorem ipsum dolor sit amet.
-                <h2>1234</h2>
 
-            </div>
-        );
-
-    }
-
-}
+ import 'antd/dist/antd.less'
+//
+// import { DatePicker, Switch } from 'antd'
+//
+//
+// class Test extends Component {
+//
+//     render() {
+//
+//         return (
+//             <div>
+//                 <DatePicker />
+//                 <Switch defaultChecked={false} onChange={(checked) => {
+//                     console.log( `switch to ${checked}` );
+//                 }}/>
+//             </div>
+//
+//         );
+//
+//     }
+//
+// }
+//
+// render(
+//     <Test />,
+//     document.getElementById('app-container')
+// );
 
 render(
-    <Test />,
+    <Provider store={store}>
+        <Index />
+    </Provider>,
     document.getElementById('app-container')
 );
